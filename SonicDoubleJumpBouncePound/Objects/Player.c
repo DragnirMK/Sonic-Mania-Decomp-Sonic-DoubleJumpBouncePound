@@ -47,7 +47,7 @@ void Player_JumpAbility_Sonic_Hook(void)
         }
     }
 
-    if (!self->invertGravity && ControllerInfo[self->controllerID].keyDown.down && ControllerInfo[self->controllerID].keyY.press && !bouncePoundDisabled) {
+    if (!self->invertGravity && self->down && ControllerInfo[self->controllerID].keyY.press && !bouncePoundDisabled) {
         self->state = Player_GroundPound_Sonic;
     }
 }
